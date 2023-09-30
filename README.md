@@ -4,11 +4,11 @@ The Django Server component of the Climate Change and Disaster Response Platform
 
 ## Table of Contents
 
-1. [Project Overview](#overview)
+1. [Project Overview](#project-overview)
 2. [Features](#features)
-3. [Installation and Setup](#installation)
-4. [API Endpoints](#endpoint)
-5. [Environment Variables](#endpoint)
+3. [Installation and Setup](#installation-and-setup)
+4. [API Endpoints](#api-endpoint)
+5. [Environment Variables](#ennvironment-variables)
 
 
 ## Project Overview
