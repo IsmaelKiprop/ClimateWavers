@@ -1,4 +1,4 @@
-# Climate Change and Disaster Response Platform - Node.js Server
+# Climate Wavers- Node.js Server
 
 The Node.js Server component of the Climate Change and Disaster Response Platform is designed to handle real-time data acquisition from third-party sources using WebSockets. This server acts as a bridge between external datasets and the AI models, providing a seamless and efficient way to integrate real-time information into the platform.
 
