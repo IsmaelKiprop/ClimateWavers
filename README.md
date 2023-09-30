@@ -58,6 +58,9 @@ Secure HTTP headers using Helmet.js to prevent various attacks like Clickjacking
 Implement secure authentication mechanisms and use encryption for sensitive data storage to prevent data breaches.
 Regular security audits and code reviews to identify and fix vulnerabilities.
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 Setup and Installation
 Clone the Repository:
 
