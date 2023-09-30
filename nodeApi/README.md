@@ -51,7 +51,7 @@ Retrieve Earthquake Data
 To retrieve earthquake data from the MongoDB database, send a GET request to /data:
 
 
-	```bash
-	curl http://localhost:3000/data
-	```
+```bash
+curl http://localhost:3000/data
+```
 
