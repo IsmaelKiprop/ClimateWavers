@@ -47,11 +47,8 @@ MongoDB Atlas for cloud-based storage
 
 ## Features
 **Real-time Climate Monitoring**: Utilize satellite data, weather stations, and environmental sensors to provide real-time climate change information.
-
 **Disaster Prediction**: Implement machine learning models to predict disaster events based on historical data and current climate patterns.
-
 **Community Engagement**: Allow users to contribute real-time observations, report incidents, and participate in disaster preparedness activities.
-
 **Third-party Data Integration**: Store and analyze third-party datasets related to climate change, environmental factors, and disaster events using MongoDB.
 
 #### OWASP Top 10 Mitigation:
