@@ -7,7 +7,6 @@ This Node.js application fetches earthquake data from an external API and stores
 
 1. Clone the repository:
 
-   ```bash
    git clone https://github.com/IsmaelKiprop/ClimateWavers.git
    cd earthquake-data-api
 
