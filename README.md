@@ -1,69 +1,75 @@
-# Climate Waver
+# Climate Change and Disaster Response Platform - Django Server
 
-This project aims to provide real-time climate change monitoring and disaster response capabilities through an integrated platform. The system utilizes Python and Node.js servers, MySQL for users and communities database, MongoDB for storing third-party datasets, and implements mitigation strategies for the OWASP Top 10 security risks.
+The Django Server component of the Climate Change and Disaster Response Platform is responsible for handling core functionalities, user management, and data processing tasks. Built on the Django web framework, this server provides a robust and secure backend for the application.
 
- ## Project Architecture
-![Architecture](images/climate.png)
+## Project Overview
 
-## Technologies Used
+The Climate Change and Disaster Response Platform aims to monitor climate changes, predict natural disasters, and facilitate efficient disaster response. Leveraging Django, the server component ensures seamless user experience, data management, and integration with various data sources.
 
-### Backend
+## Features
 
-#### Python Server:
+- **User Authentication:** Secure user registration, login, and profile management.
+- **Data Management:** Store and manage user data, community information, and datasets.
+- **Real-time Data Processing:** Process incoming data streams for analysis and visualization.
+- **Collaborative Communities:** Enable users to form communities, share observations, and collaborate.
+- **API Endpoints:** Provides RESTful APIs for frontend interaction and external integrations.
 
-Framework: Django
-Database: MySQL for user and communities data
-Real-time Data Processing: Pandas, NumPy
-Real-time Communication: Django-socketio for websocket implementation
+## Installation and Setup
 
-Machine Learning: Scikit-Learn, TensorFlow
-APIs: RESTful API endpoints for data retrieval and analysis
-Node.js Server:
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/IsmaelKiprop/ClimateWavers.git
+   cd ClimateWavers
+   ```
 
-Framework: Express.js
-Database: MongoDB for storing third-party datasets
-Real-time Communication: Socket.io for websocket implementation
-Security: Helmet.js for securing HTTP headers, Express Validator for input validation
-Frontend:
-Web Application:
-Framework: React.js
-Data Visualization: D3.js, Chart.js
-Mapping: Leaflet.js for interactive maps
-User Interface: Material-UI for responsive design
-Databases:
-MySQL:
+2. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+3. **Database Setup:**
+   - Configure the database settings in `settings.py`.
+   - Run migrations:
+     ```bash
+     python manage.py migrate
+     ```
 
+4. **Static and Media Files:**
+   - Collect static files:
+     ```bash
+     python manage.py collectstatic
+     ```
+   - Configure media file settings in `settings.py`.
 
-Schema: Users, Communities, Authentication
-ORM: SQLAlchemy
+5. **Run the Django Development Server:**
+   ```bash
+   python manage.py runserver
+   ```
 
-MongoDB:
+   The Django server will be available at `http://localhost:8000`.
 
-Collections: Third-party datasets, Real-time climate data
-MongoDB Atlas for cloud-based storage
-Features
-Real-time Climate Monitoring: Utilize satellite data, weather stations, and environmental sensors to provide real-time climate change information.
+## API Endpoints
 
-Disaster Prediction: Implement machine learning models to predict disaster events based on historical data and current climate patterns.
+- **User Management:**
+  - `/api/users/register/`: POST endpoint for user registration.
+  - `/api/users/login/`: POST endpoint for user login.
+  - `/api/users/profile/`: GET endpoint to retrieve user profile information.
 
-Community Engagement: Allow users to contribute real-time observations, report incidents, and participate in disaster preparedness activities.
+- **Community Management:**
+  - `/api/communities/`: GET and POST endpoint for community management.
+  - `/api/communities/<community_id>/`: GET, PUT, and DELETE endpoint for individual communities.
 
-Third-party Data Integration: Store and analyze third-party datasets related to climate change, environmental factors, and disaster events using MongoDB.
+- **Data Processing:**
+  - Define additional endpoints for real-time data processing based on project requirements.
 
-OWASP Top 10 Mitigation:
+## Environment Variables
 
-Implement input validation and sanitization to prevent SQL Injection and Cross-site Scripting (XSS) attacks.
-Secure HTTP headers using Helmet.js to prevent various attacks like Clickjacking.
-Implement secure authentication mechanisms and use encryption for sensitive data storage to prevent data breaches.
-Regular security audits and code reviews to identify and fix vulnerabilities.
+- **SECRET_KEY:** Django secret key for security (store in a secure environment).
+- **DEBUG:** Set to `True` for development, `False` for production.
+- **DATABASE_URL:** Database connection URL for MYSQL databases.
+- **ALLOWED_HOSTS:** List of allowed hostnames for the Django server.
+
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-Setup and Installation
-Clone the Repository:
-
-git clone https://https://github.com/IsmaelKiprop/ClimateWavers.git
-cd ClimateWavers
-Setup Python Server:
