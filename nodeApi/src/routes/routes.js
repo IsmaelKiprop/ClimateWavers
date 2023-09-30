@@ -1,3 +1,5 @@
+// nodeApi/src/routes/routes.js
+
 const express = require('express');
 const router = express.Router();
 const EarthquakeData = require('../models/earthQuakeData');
@@ -17,3 +19,4 @@ router.get('/data', async (req, res) => {
 });
 
 module.exports = router;
+
