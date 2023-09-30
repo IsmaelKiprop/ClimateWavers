@@ -4,11 +4,13 @@ The Node.js Server component of the Climate Change and Disaster Response Platfor
 
 ## Table of Contents
 
-1. [Project Overview](#overview)
+1. [Project Overview](#project-overview)
 2. [Features](#features)
-3. [Installation and Setup](#installation)
-4. [WebSocket Endpoints](#endpoint)
-5. [Error Handling](#error)
+3. [Installation and Setup](#installation-and-setup)
+4. [Websocket Endpoints](#websocket-endpoints)
+5. [Environment Variables](#environment-variables)
+6. [External API Integration](#external-api-integration)
+5. [Error Handling](#error-handling)
 
 ## Project Overview
 
