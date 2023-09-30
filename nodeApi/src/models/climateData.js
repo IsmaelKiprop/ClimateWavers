@@ -7,4 +7,5 @@ const climateSchema = new mongoose.Schema({
   timestamp: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model('WeatherData', climateSchema);
+module.exports = mongoose.model('ClimateData', climateSchema);
+

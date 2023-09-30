@@ -1,6 +1,7 @@
+// nodeApi/src/controllers/earthQuakeController.js
+
 const axios = require('axios');
-const EarthquakeData = require('../models/earthQuakeData');
-const { ObjectId } = require('mongoose').Types; // Import ObjectId from mongoose
+const EarthquakeData = require('../models/earthQuakeData'); // Assuming your model file is named 'earthquakeData'
 
 async function fetchAndStoreEarthquakeData(req, res) {
   try {
@@ -21,11 +22,7 @@ async function fetchAndStoreEarthquakeData(req, res) {
         location_properties,
       } = earthquakeItem;
 
-      // Generate a new ObjectId for _id
-      const _id = new ObjectId();
-
       const earthquake = new EarthquakeData({
-        _id,
         earthquake_id,
         provider,
         title,
@@ -39,6 +36,9 @@ async function fetchAndStoreEarthquakeData(req, res) {
       await earthquake.save();
     }
 
+    // Send a real-time update to connected clients (similar to climateController.js)
+    sendRealTimeEarthquakeDataToClients(earthquakeData);
+
     res.status(200).json({ message: 'Earthquake data fetched and stored successfully.' });
   } catch (error) {
     console.error('Error:', error);
@@ -46,6 +46,13 @@ async function fetchAndStoreEarthquakeData(req, res) {
   }
 }
 
+// Function to send real-time earthquake data to connected clients
+function sendRealTimeEarthquakeDataToClients(data) {
+  // Establish a WebSocket connection here (similar to climateController.js)
+  // You can reuse the WebSocket server setup from app.js
+}
+
 module.exports = {
   fetchAndStoreEarthquakeData,
 };
+
