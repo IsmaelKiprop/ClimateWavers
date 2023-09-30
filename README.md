@@ -2,6 +2,15 @@
 
 The Django Server component of the Climate Change and Disaster Response Platform is responsible for handling core functionalities, user management, and data processing tasks. Built on the Django web framework, this server provides a robust and secure backend for the application.
 
+## Table of Contents
+
+1. [Project Overview](#overview)
+2. [Features](#features)
+3. [Installation and Setup](#installation)
+4. [API Endpoints](#endpoint)
+5. [Environment Variables](#endpoint)
+
+
 ## Project Overview
 
 The Climate Change and Disaster Response Platform aims to monitor climate changes, predict natural disasters, and facilitate efficient disaster response. Leveraging Django, the server component ensures seamless user experience, data management, and integration with various data sources.
