@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Replace this with your MongoDB Atlas connection string
-const atlasConnectionString = 'mongodb+srv://<username>:<password>@cluster.mongodb.net/test?retryWrites=true&w=majority';
+const atlasConnectionString = 'mongodb+srv://climate:climate@cluster0.nel0lco.mongodb.net/?retryWrites=true&w=majority';
 
 // Connect to the MongoDB Atlas cluster
 mongoose.connect(atlasConnectionString, {
