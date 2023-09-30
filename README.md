@@ -2,6 +2,14 @@
 
 The Node.js Server component of the Climate Change and Disaster Response Platform is designed to handle real-time data acquisition from third-party sources using WebSockets. This server acts as a bridge between external datasets and the AI models, providing a seamless and efficient way to integrate real-time information into the platform.
 
+## Table of Contents
+
+1. [Project Overview](#overview)
+2. [Features](#features)
+3. [Installation and Setup](#installation)
+4. [WebSocket Endpoints](#endpoint)
+5. [Error Handling](#error)
+
 ## Project Overview
 
 The Climate Change and Disaster Response Platform aims to monitor climate changes, predict natural disasters, and facilitate efficient disaster response. The Node.js Server, powered by WebSocket technology, enables the platform to gather real-time data from various sources, enhancing the accuracy and timeliness of predictions.
@@ -59,10 +67,6 @@ The Node.js server integrates with external APIs to acquire real-time datasets. 
 ## Error Handling
 
 The server includes error handling mechanisms to manage scenarios where data retrieval from external sources fails. Error logs and notifications are implemented to aid in diagnosing and resolving issues promptly.
-
-## Contributing
-
-Contributions are welcome! Please follow the guidelines in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 ## License
 
