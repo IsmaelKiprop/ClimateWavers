@@ -58,9 +58,10 @@ Regular security audits and code reviews to identify and fix vulnerabilities.
 
 #### Setup and Installation
 Clone the Repository:
-
+```bash
 git clone https://https://github.com/IsmaelKiprop/ClimateWavers.git
 cd ClimateWavers
+bash
 
 Setup Python Server:
 
