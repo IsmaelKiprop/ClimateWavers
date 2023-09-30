@@ -61,7 +61,7 @@ Clone the Repository:
 ```bash
 git clone https://https://github.com/IsmaelKiprop/ClimateWavers.git
 cd ClimateWavers
-bash
+```
 
 Setup Python Server:
 
