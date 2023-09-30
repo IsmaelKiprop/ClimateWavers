@@ -41,7 +41,7 @@ This project aims to provide real-time climate change monitoring and disaster re
 **Collections**: Third-party datasets, Real-time climate data
 MongoDB Atlas for cloud-based storage
 
-##### Features
+## Features
 **Real-time Climate Monitoring**: Utilize satellite data, weather stations, and environmental sensors to provide real-time climate change information.
 
 **Disaster Prediction**: Implement machine learning models to predict disaster events based on historical data and current climate patterns.
