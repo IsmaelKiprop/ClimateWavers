@@ -1,5 +1,6 @@
 const axios = require('axios');
-const EarthquakeData = require('../models/earthQuakeData'); // Assuming your model file is named 'earthquakeData'
+const EarthquakeData = require('../models/earthQuakeData');
+const { ObjectId } = require('mongoose').Types; // Import ObjectId from mongoose
 
 async function fetchAndStoreEarthquakeData(req, res) {
   try {
@@ -10,7 +11,6 @@ async function fetchAndStoreEarthquakeData(req, res) {
     // Store the earthquake data in MongoDB
     for (const earthquakeItem of earthquakeData) {
       const {
-        _id,
         earthquake_id,
         provider,
         title,
@@ -20,6 +20,9 @@ async function fetchAndStoreEarthquakeData(req, res) {
         geojson,
         location_properties,
       } = earthquakeItem;
+
+      // Generate a new ObjectId for _id
+      const _id = new ObjectId();
 
       const earthquake = new EarthquakeData({
         _id,
