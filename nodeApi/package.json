@@ -1,0 +1,25 @@
+{
+  "name": "nodeapi",
+  "version": "1.0.0",
+  "description": "This is the node Api that fetches data from third party API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Salawu O. Joseph",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsmaelKiprop/ClimateWavers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IsmaelKiprop/ClimateWavers/issues"
+  },
+  "homepage": "https://github.com/IsmaelKiprop/ClimateWavers#readme",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.3"
+  }
+}
