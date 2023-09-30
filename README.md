@@ -37,7 +37,8 @@ TensorFlow
 
 ### Databases:
 #### MySQL
-**Schema**: Users, Communities, Authentication
+**Schema**: Users, Communities\
+           Authentication\
 **ORM**: SQLAlchemy
 
 #### MongoDB:
