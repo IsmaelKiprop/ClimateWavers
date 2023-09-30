@@ -9,7 +9,7 @@ This project aims to provide real-time climate change monitoring and disaster re
 
 ### Backend
 
-#### Python Server:\
+#### Python Server:
 **Framework**: Django\
 **Database**: MySQL for user and communities data\
 **Real-time Data Processing**: Pandas, NumPy\
@@ -21,7 +21,7 @@ TensorFlow
 
 **APIs**: RESTful API endpoints for data retrieval and analysis
 
-**Node.js Server**\
+**Node.js Server**
 
 **Framework**: Express.js\
 **Database**: MongoDB for storing third-party datasets\
@@ -30,10 +30,10 @@ TensorFlow
 
 ### Frontend
 
-**Framework**: React.js
-**Data Visualization**: D3.js, Chart.js
-**Mapping**: Leaflet.js for interactive maps
-**User Interface**: Material-UI for responsive design
+**Framework**: React.js\
+**Data Visualization**: D3.js, Chart.js\
+**Mapping**: Leaflet.js for interactive maps\
+**User Interface**: Material-UI for responsive design\
 
 ### Databases:
 #### MySQL
