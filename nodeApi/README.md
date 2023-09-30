@@ -24,8 +24,7 @@ Configure MongoDB:
 
 Start the application:
 
-```bash
-
+	```bash
     npm start
 	```
 
@@ -43,17 +42,16 @@ Fetch and Store Earthquake Data
 
 To fetch and store earthquake data from the external API, send a GET request to /fetch-earthquake-data:
 
-```bash
-
-curl http://localhost:3000/fetch-earthquake-data
-```
+	```bash
+	curl http://localhost:3000/fetch-earthquake-data
+	```
 
 Retrieve Earthquake Data
 
 To retrieve earthquake data from the MongoDB database, send a GET request to /data:
 
 
-```bash
-curl http://localhost:3000/data
-```
+	```bash
+	curl http://localhost:3000/data
+	```
 
