@@ -13,8 +13,7 @@ This Node.js application fetches earthquake data from an external API and stores
 
     Install the dependencies:
 
-    bash
-
+   
 npm install
 
 Configure MongoDB:
