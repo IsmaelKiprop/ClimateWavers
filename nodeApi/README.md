@@ -7,16 +7,16 @@ This Node.js application fetches earthquake data from an external API and stores
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/IsmaelKiprop/ClimateWavers.git
-   cd ClimateWavers/earthquake-data-api
-   ```
+```bash
+git clone https://github.com/IsmaelKiprop/ClimateWavers.git
+cd ClimateWavers/earthquake-data-api
+```
 
     Install the dependencies:
 
-    ```bash
-	npm install
-	```
+```bash
+npm install
+```
 
 Configure MongoDB:
 
@@ -24,9 +24,9 @@ Configure MongoDB:
 
 Start the application:
 
-	```bash
-    npm start
-	```
+```bash
+npm start
+```
 
 The application should now be running on http://localhost:3000.
 API Routes
@@ -42,9 +42,9 @@ Fetch and Store Earthquake Data
 
 To fetch and store earthquake data from the external API, send a GET request to /fetch-earthquake-data:
 
-	```bash
-	curl http://localhost:3000/fetch-earthquake-data
-	```
+```bash
+curl http://localhost:3000/fetch-earthquake-data
+```
 
 Retrieve Earthquake Data
 
