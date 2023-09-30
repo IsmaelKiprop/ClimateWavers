@@ -16,22 +16,21 @@ This project aims to provide real-time climate change monitoring and disaster re
 **Real-time Data Processing**: Pandas, NumPy
 **Real-time Communication**: Django-socketio for websocket implementation
 
-**Machine Learning**: Scikit-Learn, TensorFlow
+**Machine Learning**: TensorFlow
 
 **APIs**: RESTful API endpoints for data retrieval and analysis
 
-**Node.js Server:
-**Framework: Express.js
+**Node.js Server**
+**Framework**: Express.js
 **Database**: MongoDB for storing third-party datasets
 **Real-time Communication**: Socket.io for websocket implementation
 **Security**: Helmet.js for securing HTTP headers, Express Validator for input validation
 
-Frontend:
-Web Application:
-Framework: React.js
-Data Visualization: D3.js, Chart.js
-Mapping: Leaflet.js for interactive maps
-User Interface: Material-UI for responsive design
+### Frontend
+**Framework**: React.js
+**Data Visualization**: D3.js, Chart.js
+**Mapping**: Leaflet.js for interactive maps
+**User Interface**: Material-UI for responsive design
 
 ### Databases:
 #### MySQL
