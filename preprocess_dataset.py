@@ -18,6 +18,7 @@ merged_data = pd.merge(climate_data, earthquake_data, on='location_id', how='inn
 features = merged_data[['temperature', 'precipitation', 'humidity', 'wind_speed', 'magnitude', 'depth']]
 labels = merged_data['encoded_disaster_type']  # Assuming you're predicting disaster types
 
+
 # Standardize features
 scaler = StandardScaler()
 scaled_features = scaler.fit_transform(features)
