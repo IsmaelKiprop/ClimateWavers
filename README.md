@@ -83,10 +83,6 @@ accuracy = accuracy_score(y_test, predictions)
 print(f'Accuracy: {accuracy * 100:.2f}%')
 ```
 
-## Conclusion
-
-In this section, we demonstrated how to preprocess the dataset using Pandas and NumPy and build a predictive model using scikit-learn. These libraries provide powerful tools for data manipulation, preprocessing, and machine learning, enabling us to create an effective AI model for disaster prediction in our project.
-
 ##  **Building the AI Model:**
 - **Model Architecture:**
   - TensorFlow's flexible architecture allows the creation of deep neural networks tailored to our data.
