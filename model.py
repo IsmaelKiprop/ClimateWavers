@@ -6,23 +6,15 @@ from sklearn.metrics import accuracy_score
 
 
 # Load your climate and earthquake datasets (replace 'climate.json' and 'earthquake.json' with your actual file paths)
-climate_data = pd.read_json('climate.json')  # Updated to read JSON files
-earthquake_data = pd.read_json('earthquake.json')  # Updated to read JSON files
+climate_data = pd.read_csv('earthquake.json')  # Updated to read JSON files
+earthquake_data = pd.read_csv('earthquake.json')  # Updated to read JSON files
 
 # Assuming 'disaster_type' is a column in your earthquake dataset representing the type of disaster
 # This step is necessary only if you have a classification task (predicting disaster types)
-label_encoder = LabelEncoder()
-earthquake_data['encoded_disaster_type'] = label_encoder.fit_transform(earthquake_data['disaster_type'])
-
-# Merge datasets on a common column (e.g., 'location_id') if they share a common identifier
-merged_data = pd.merge(climate_data, earthquake_data, on='location_id', how='inner')
-
-# Select features and labels
-features = merged_data[['temperature', 'precipitation', 'humidity', 'wind_speed', 'magnitude', 'depth']]
-labels = merged_data['encoded_disaster_type']  # Assuming you're predicting disaster types
-
-
-# Standardize features
+climate_data.fillna(0, inplace=True)
+earthquake_data.fillna(0, inplace=True)
+features = pd.concat([climate_data[['temperature', 'precipitation']], earthquake_data[['magnitude', 'depth']]], axis=1)
+labels = earthquake_data['disaster_type']
 scaler = StandardScaler()
 scaled_features = scaler.fit_transform(features)
 
