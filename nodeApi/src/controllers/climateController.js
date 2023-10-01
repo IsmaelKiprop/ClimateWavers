@@ -2,7 +2,6 @@ const axios = require('axios');
 const ClimateData = require('../models/climateData');
 const NOAA_API_URL = 'https://www.ncdc.noaa.gov/cdo-web/api/v2/data'; // NOAA Climate Data API URL
 const API_KEY = 'NOAA_API_KEY'; // Replace with your NOAA API key
-const WebSocket = require('ws'); // Import the WebSocket library
 
 // Function to fetch and analyze climate data using the NOAA Climate Data API
 async function fetchAndAnalyzeClimateData(req, res, wss) {

@@ -4,7 +4,8 @@
   "description": "This is the node Api that fetches data from third party API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "Salawu O. Joseph",
@@ -21,6 +22,8 @@
     "axios": "^1.5.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "mongoose": "^7.5.3"
+    "http": "^0.0.1-security",
+    "mongoose": "^7.5.3",
+    "ws": "^8.14.2"
   }
 }
