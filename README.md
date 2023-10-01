@@ -1,6 +1,6 @@
-# AI-Driven Disaster Response Project with Climate and Earthquake Data Integration - README
+# Climate Wavers - AI Model
 
-Welcome to the AI-Driven Disaster Response Project! This project leverages TensorFlow to integrate climate and earthquake datasets, empowering our disaster response system with accurate predictions and proactive insights. Below is a comprehensive guide to help you understand and contribute to this project.
+Welcome to the AI-Driven Disaster Response Project - Climate Wavers! This project leverages TensorFlow to integrate climate and earthquake datasets, empowering our disaster response system with accurate predictions and proactive insights. Below is a comprehensive guide to help you understand and contribute to this project.
 
 ## 1. **Project Overview:**
 This project integrates historical climate and earthquake data to build a robust AI model for disaster prediction and response. By utilizing TensorFlow, we create advanced machine learning algorithms that enable real-time analysis and forecasting.
