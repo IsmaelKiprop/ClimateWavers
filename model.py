@@ -6,8 +6,8 @@ from sklearn.metrics import accuracy_score
 
 
 # Load your climate and earthquake datasets (replace 'climate.json' and 'earthquake.json' with your actual file paths)
-climate_data = pd.read_csv('earthquake.json')  # Updated to read JSON files
-earthquake_data = pd.read_csv('earthquake.json')  # Updated to read JSON files
+climate_data = pd.read_csv('earthquake.csv')  # Updated to read JSON files
+earthquake_data = pd.read_csv('earthquake.csv')  # Updated to read JSON files
 
 # Assuming 'disaster_type' is a column in your earthquake dataset representing the type of disaster
 # This step is necessary only if you have a classification task (predicting disaster types)
