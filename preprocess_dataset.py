@@ -2,9 +2,9 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.model_selection import train_test_split
 
-# Load your climate and earthquake datasets (replace 'climate.csv' and 'earthquake.csv' with your actual file paths)
-climate_data = pd.read_csv('climate.json')
-earthquake_data = pd.read_csv('earthquake.json')
+# Load your climate and earthquake datasets (replace 'climate.json' and 'earthquake.json' with your actual file paths)
+climate_data = pd.read_json('climate.json')  # Updated to read JSON files
+earthquake_data = pd.read_json('earthquake.json')  # Updated to read JSON files
 
 # Assuming 'disaster_type' is a column in your earthquake dataset representing the type of disaster
 # This step is necessary only if you have a classification task (predicting disaster types)
@@ -24,3 +24,4 @@ scaled_features = scaler.fit_transform(features)
 
 # Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(scaled_features, labels, test_size=0.2, random_state=42)
+
