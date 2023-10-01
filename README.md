@@ -14,7 +14,7 @@ This project aims to provide real-time climate change monitoring and disaster re
 
    
  ## Project Architecture
-![Architecture](https://github.com/IsmaelKiprop/ClimateWavers/blob/a479864e5942aeadf2dfc394b49790bb51a2c017/images/climate.jpg)
+![Architecture](https://github.com/IsmaelKiprop/ClimateWavers/blob/fe180556e0504ee326a915adc0fa881969a5a4a3/images/architecture.jpg)
 
 ## Technologies Used
 
