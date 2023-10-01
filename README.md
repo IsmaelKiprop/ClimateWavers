@@ -3,7 +3,7 @@
 Welcome to the AI-Driven Disaster Response Project - Climate Wavers! This project leverages TensorFlow to integrate climate and earthquake datasets, empowering our disaster response system with accurate predictions and proactive insights. Below is a comprehensive guide to help you understand and contribute to this project.
 
 ##  **Project Overview:**
-This project integrates historical climate and earthquake data to build a robust AI model for disaster prediction and response. By utilizing TensorFlow, we create advanced machine learning algorithms that enable real-time analysis and forecasting.
+This project integrates historical climate and earthquake data to build a robust AI model for disaster prediction and response. By utilizing TensorFlow, we create advanced machine learning algorithms that enable real-time analysis and forecasting. This server calls NodeJS server for datasets and convert to csv
 
 ##  **Data Set Integration:**
 - **Climate Data:**
