@@ -13,7 +13,7 @@ earthquake_data = pd.read_csv('earthquake.json')  # Updated to read JSON files
 # This step is necessary only if you have a classification task (predicting disaster types)
 climate_data.fillna(0, inplace=True)
 earthquake_data.fillna(0, inplace=True)
-features = pd.concat([climate_data[['temperature', 'precipitation']], earthquake_data[['magnitude', 'depth']]], axis=1)
+features = pd.concat([climate_data[['temperature', 'precipitation']], earthquake_data[['mag', 'depth']]], axis=1)
 labels = earthquake_data['disaster_type']
 scaler = StandardScaler()
 scaled_features = scaler.fit_transform(features)
