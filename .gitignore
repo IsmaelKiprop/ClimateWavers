@@ -1,0 +1,7 @@
+# Exclude virtual environment directory
+venv/
+
+# Exclude other files and directories
+__pycache__/
+db.sqlite3
+__init__.py
