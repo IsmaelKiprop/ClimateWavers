@@ -6,18 +6,18 @@ This Node.js API fetches and stores earthquake data from an external API and ana
 
 The following is an overview of the file structure for this Node.js application:
 
-nodeApi/
-├── src/
-│ ├── app.js
-│ ├── controllers/
-│ │ ├── earthquakeController.js
+nodeApi/\
+├── src/\
+│ ├── app.js\
+│ ├── controllers/\
+│ │ ├── earthquakeController.js\
 │ │ ├── climateController.js
-│ ├── routes/
-│ │ ├── routes.js
-│ ├── models/
-│ │ ├── earthQuakeData.js
-│ │ ├── climateData.js
-├── package.json
+│ ├── routes/\
+│ │ ├── routes.js\
+│ ├── models/\
+│ │ ├── earthQuakeData.js\
+│ │ ├── climateData.js\
+├── package.json\
 ├── README.md 
 
 
@@ -28,6 +28,7 @@ nodeApi/
   - `controllers/`: This directory holds controller logic for different aspects of the application, such as fetching and storing earthquake and climate data, and sending real-time updates via WebSocket.
     - `earthquakeController.js`: Contains logic for fetching and storing earthquake data and sending real-time updates.
     - `climateController.js`: Contains logic for fetching and analyzing climate data and sending real-time updates.
+    - `chatbotController.js`: Contains logic for fetching and analyzing response to messages from ChatGPT in real time
   - `routes/`: Contains API route definitions.
     - `routes.js`: Defines routes for retrieving earthquake and climate data.
   - `models/`: Contains MongoDB schema definitions for data models.
