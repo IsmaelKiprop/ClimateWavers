@@ -1,6 +1,6 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler, LabelEncoder
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
@@ -13,7 +13,8 @@ earthquake_data = pd.read_csv('earthquake.csv')  # Updated to read JSON files
 # This step is necessary only if you have a classification task (predicting disaster types)
 climate_data.fillna(0, inplace=True)
 earthquake_data.fillna(0, inplace=True)
-features = pd.concat([climate_data[['temperature', 'precipitation']], earthquake_data[['mag', 'depth']]], axis=1)
+features = pd.concat([climate_data[['temperature', 'precipitation']], earthquake_data[['earthquakeData/mag', 'earthquakeData/depth']]], axis=1)
+earthquake_data['disaster_type'] = "earthquake"
 labels = earthquake_data['disaster_type']
 scaler = StandardScaler()
 scaled_features = scaler.fit_transform(features)
@@ -21,9 +22,8 @@ scaled_features = scaler.fit_transform(features)
 # Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(scaled_features, labels, test_size=0.2, random_state=42)
 
-
 # Train data with RandomForest
-model = RandomForestClassifier(random_state=42)
+model =  HistGradientBoostingClassifier(random_state=42)
 model.fit(X_train, y_train)
 
 # Make predictions
