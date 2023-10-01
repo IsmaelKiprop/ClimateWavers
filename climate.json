@@ -1,0 +1,59 @@
+[
+  {
+    "timestamp": "2023-10-01T17:15:00Z",
+    "location": "Nairobi, Kenya",
+    "temperature": 28.0,
+    "humidity": "35%",
+    "pressure": "1012.2 hPa",
+    "windSpeed": "0 mph",
+    "windDirection": "South-West",
+    "precipitation": "0 mm",
+    "cloudiness": "0%"
+  },
+  {
+    "timestamp": "2023-10-01T17:30:00Z",
+    "location": "Nairobi, Kenya",
+    "temperature": 28.5,
+    "humidity": "30%",
+    "pressure": "1012.0 hPa",
+    "windSpeed": "-1 mph",
+    "windDirection": "West",
+    "precipitation": "0 mm",
+    "cloudiness": "0%"
+  },
+  {
+    "timestamp": "2023-10-01T17:45:00Z",
+    "location": "Nairobi, Kenya",
+    "temperature": 29.0,
+    "humidity": "25%",
+    "pressure": "1011.8 hPa",
+    "windSpeed": "-2 mph",
+    "windDirection": "North-West",
+    "precipitation": "0 mm",
+    "cloudiness": "0%"
+  },
+  {
+    "timestamp": "2023-10-01T18:00:00Z",
+    "location": "Nairobi, Kenya",
+    "temperature": 29.5,
+    "humidity": "20%",
+    "pressure": "1011.6 hPa",
+    "windSpeed": "-3 mph",
+    "windDirection": "North",
+    "precipitation": "0 mm",
+    "cloudiness": "0%"
+  },
+  {
+    "timestamp": "2023-10-01T18:15:00Z",
+    "location": "Nairobi, Kenya",
+    "temperature": 30.0,
+    "humidity": "15%",
+    "pressure": "1011.4 hPa",
+    "windSpeed": "-4 mph",
+    "windDirection": "North-East",
+    "precipitation": "0 mm",
+    "cloudiness": "0%"
+  },
+  
+]
+
