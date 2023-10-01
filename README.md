@@ -3,7 +3,7 @@
 This project aims to provide real-time climate change monitoring and disaster response capabilities through an integrated platform. The system utilizes Python and Node.js servers, MySQL for users and communities database, MongoDB for storing third-party datasets, and implements mitigation strategies for the OWASP Top 10 security risks.
 
  ## Project Architecture
-![Architecture](https://github.com/IsmaelKiprop/ClimateWavers/blob/a479864e5942aeadf2dfc394b49790bb51a2c017/images/climate.png)
+![Architecture](https://github.com/IsmaelKiprop/ClimateWavers/blob/a479864e5942aeadf2dfc394b49790bb51a2c017/images/climate.jpg)
 
 ## Technologies Used
 
