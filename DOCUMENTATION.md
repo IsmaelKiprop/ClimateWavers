@@ -11,7 +11,7 @@ nodeApi/\
 │ ├── app.js\
 │ ├── controllers/\
 │ │ ├── earthquakeController.js\
-│ │ ├── climateController.js
+│ │ ├── climateController.js\
 │ ├── routes/\
 │ │ ├── routes.js\
 │ ├── models/\
