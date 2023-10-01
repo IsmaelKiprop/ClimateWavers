@@ -8,12 +8,12 @@ The following is an overview of the file structure for this Node.js application:
 
 nodeApi/
 ├── src/
-│ ├── app.js
+│ ├── app.js/
 │ ├── controllers/
 │ │ ├── earthquakeController.js
 │ │ ├── climateController.js
 │ ├── routes/
-│ │ ├── routes.js
+│ │ ├── routes.js/
 │ ├── models/
 │ │ ├── earthQuakeData.js
 │ │ ├── climateData.js
