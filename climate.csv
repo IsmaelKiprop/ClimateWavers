@@ -1,0 +1,6 @@
+timestamp,location,temperature,humidity,pressure,windSpeed,windDirection,precipitation,cloudiness
+2023-10-01T17:15:00Z,"Nairobi, Kenya",28,35%,1012.2 hPa,0 mph,South-West,0 mm,0%
+2023-10-01T17:30:00Z,"Nairobi, Kenya",28.5,30%,1012.0 hPa,-1 mph,West,0 mm,0%
+2023-10-01T17:45:00Z,"Nairobi, Kenya",29,25%,1011.8 hPa,-2 mph,North-West,0 mm,0%
+2023-10-01T18:00:00Z,"Nairobi, Kenya",29.5,20%,1011.6 hPa,-3 mph,North,0 mm,0%
+2023-10-01T18:15:00Z,"Nairobi, Kenya",30,15%,1011.4 hPa,-4 mph,North-East,0 mm,0%
