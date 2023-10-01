@@ -12,7 +12,7 @@ This project integrates historical climate and earthquake data to build a robust
   - Earthquake magnitude, location, depth, and occurrence time are incorporated for seismic analysis.
 - **TensorFlow Integration:**
   - TensorFlow is utilized to merge and preprocess the integrated datasets efficiently.
- 
+
 
 ## Preprocessing with Pandas and NumPy
 
@@ -38,12 +38,8 @@ climate_data.fillna(0, inplace=True)
 earthquake_data.fillna(0, inplace=True)
 
 # Feature selection and encoding (if needed)
-# Merge datasets on a common column (e.g., 'location_id') if they share a common identifier
-merged_data = pd.merge(climate_data, earthquake_data, on='location_id', how='inner')
-
-# Features and labels
-features = merged_data[['temperature', 'precipitation', 'humidity', 'wind_speed', 'magnitude', 'depth']]
-labels = merged_data['encoded_disaster_type']  # Predicting disaster types
+features = pd.concat([climate_data[['temperature', 'precipitation']], earthquake_data[['magnitude', 'depth']]], axis=1)
+labels = earthquake_data['disaster_type']
 
 # Encoding categorical variables (if applicable)
 # (e.g., using LabelEncoder from scikit-learn)
@@ -96,7 +92,7 @@ print(f'Accuracy: {accuracy * 100:.2f}%')
 ##  **Deployment and Integration:**
 - **API Development:**
   - TensorFlow models are integrated into APIs, allowing seamless communication between the application and the AI engine. The model can be connected to external APIs for enhanced climate data analysis. The model can also interacts with external APIs, such as the NOAA Climate Data API and Google Cloud AI, to improve its accuracy and provide richer insights
-    
+
 - **Real-time Predictions:**
   - The deployed model provides real-time predictions, enabling instant disaster risk assessments and response strategies.
 
