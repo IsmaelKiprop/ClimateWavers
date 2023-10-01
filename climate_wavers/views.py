@@ -23,7 +23,7 @@ def index(request):
     if request.user.is_authenticated:
         followings = Follower.objects.filter(followers=request.user).values_list('user', flat=True)
         suggestions = User.objects.exclude(pk__in=followings).exclude(username=request.user.username).order_by("?")[:6]
-    return render(request, "network/index.html", {
+    return render(request, "climate_wavers/index.html", {
         "posts": posts,
         "suggestions": suggestions,
         "page": "all_posts",
@@ -44,11 +44,11 @@ def login_view(request):
             login(request, user)
             return HttpResponseRedirect(reverse("index"))
         else:
-            return render(request, "network/login.html", {
+            return render(request, "climate_wavers/login.html", {
                 "message": "Invalid username and/or password."
             })
     else:
-        return render(request, "network/login.html")
+        return render(request, "climate_wavers/login.html")
 
 
 def logout_view(request):
@@ -71,7 +71,7 @@ def register(request):
         password = request.POST["password"]
         confirmation = request.POST["confirmation"]
         if password != confirmation:
-            return render(request, "network/register.html", {
+            return render(request, "climate_wavers/register.html", {
                 "message": "Passwords must match."
             })
 
@@ -84,17 +84,17 @@ def register(request):
                 user.profile_pic = profile
             else:
                 user.profile_pic = "profile_pic/no_pic.png"
-            user.cover = cover           
+            user.cover = cover
             user.save()
             Follower.objects.create(user=user)
         except IntegrityError:
-            return render(request, "network/register.html", {
+            return render(request, "climate_wavers/register.html", {
                 "message": "Username already taken."
             })
         login(request, user)
         return HttpResponseRedirect(reverse("index"))
     else:
-        return render(request, "network/register.html")
+        return render(request, "climate_wavers/register.html")
 
 
 
@@ -115,10 +115,10 @@ def profile(request, username):
 
         if request.user in Follower.objects.get(user=user).followers.all():
             follower = True
-    
+
     follower_count = Follower.objects.get(user=user).followers.all().count()
     following_count = Follower.objects.filter(followers=user).count()
-    return render(request, 'network/profile.html', {
+    return render(request, 'climate_wavers/profile.html', {
         "username": user,
         "posts": posts,
         "posts_count": all_posts.count(),
@@ -140,7 +140,7 @@ def following(request):
         posts = paginator.get_page(page_number)
         followings = Follower.objects.filter(followers=request.user).values_list('user', flat=True)
         suggestions = User.objects.exclude(pk__in=followings).exclude(username=request.user.username).order_by("?")[:6]
-        return render(request, "network/index.html", {
+        return render(request, "climate_wavers/index.html", {
             "posts": posts,
             "suggestions": suggestions,
             "page": "following"
@@ -160,14 +160,14 @@ def saved(request):
 
         followings = Follower.objects.filter(followers=request.user).values_list('user', flat=True)
         suggestions = User.objects.exclude(pk__in=followings).exclude(username=request.user.username).order_by("?")[:6]
-        return render(request, "network/index.html", {
+        return render(request, "climate_wavers/index.html", {
             "posts": posts,
             "suggestions": suggestions,
             "page": "saved"
         })
     else:
         return HttpResponseRedirect(reverse('login'))
-        
+
 
 
 @login_required
@@ -197,7 +197,7 @@ def edit_post(request, post_id):
             if img_chg != 'false':
                 post.content_image = pic
             post.save()
-            
+
             if(post.content_text):
                 post_text = post.content_text
             else:
@@ -206,7 +206,7 @@ def edit_post(request, post_id):
                 post_image = post.img_url()
             else:
                 post_image = False
-            
+
             return JsonResponse({
                 "success": True,
                 "text": post_text,
@@ -344,7 +344,7 @@ def comment(request, post_id):
                 return JsonResponse([newcomment.serialize()], safe=False, status=201)
             except Exception as e:
                 return HttpResponse(e)
-    
+
         post = Post.objects.get(id=post_id)
         comments = Comment.objects.filter(post=post)
         comments = comments.order_by('-comment_time').all()

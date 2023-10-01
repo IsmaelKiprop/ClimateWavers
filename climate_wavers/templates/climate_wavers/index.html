@@ -1,4 +1,4 @@
-{% extends "network/layout.html" %}
+{% extends "climate_wavers/layout.html" %}
 
 {% load static %}
 
@@ -7,7 +7,7 @@
         <div class="left-div">
             <nav class="head heading">
                 {% if page == 'all_posts' %}
-                    All Posts
+                    Community Posts
                 {% elif page == 'following' %}
                     Following
                 {% elif page == 'saved' %}
@@ -79,7 +79,7 @@
                                             <div class="post-image" style="display: none;"></div>
                                         {% endif %}
                                         <div class="post-actions">
-    
+
                                             {% if user in post.likers.all %}
                                                 <div class="like" onclick="unlike_post(this)" data-post_id="{{post.id}}">
                                                     <div class="svg-span">
@@ -101,7 +101,7 @@
                                                     <div style="padding: 7px 0px;" class="likes_count">{{post.likers.count}}</div>
                                                 </div>
                                             {% endif %}
-    
+
                                             <div class="comment" onclick="show_comment(this)">
                                                 <div class="svg-span">
                                                     <svg width="1.1em" height="1.1em" viewBox="0 0 16 16" class="bi bi-chat" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -110,10 +110,10 @@
                                                 </div>&nbsp;
                                                 <div style="padding: 7px 0px;" class="cmt-count">{{post.comment_count}}</div>
                                             </div>
-    
-    
-    
-    
+
+
+
+
                                             {% if user in post.savers.all %}
                                                 <div class="save" onclick="unsave_post(this)" data-post_id="{{post.id}}">
                                                     <div class="svg-span">
@@ -131,13 +131,13 @@
                                                     </div>
                                                 </div>
                                             {% endif %}
-    
+
                                         </div>
                                     </div>
                                 </div>
                                 <div class="comment-div" style="display: none;" data-post_id="{{post.id}}">
                                     <div class="spinner-div">
-                                        <img src="{% static 'network/Images/spinner.gif' %}" id="spinner" height="65px">
+                                        <img src="{% static 'climate_wavers/Images/spinner.gif' %}" id="spinner" height="65px">
                                     </div>
                                     {% if user.is_authenticated %}
                                         <div class="comment-div-data" style="display: none;">
@@ -206,8 +206,8 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
-    
+
 
 {% endblock %}

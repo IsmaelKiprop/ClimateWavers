@@ -1,24 +1,24 @@
-{% extends "network/layout2.html" %}
+{% extends "climate_wavers/layout2.html" %}
 
 {% load static %}
 
 {% block title %}
-    Sign Up | Network
+    Sign Up | Climate Wavers
 {% endblock %}
 
 {% block script %}
-    <script type"text/javascript" src="{% static 'network/signup.js' %}"></script>
+    <script type"text/javascript" src="{% static 'climate_wavers/signup.js' %}"></script>
 {% endblock %}
 
 {% block body %}
     <div class="user-box" style="margin-top: 6vh;">
         <div>
             <center>
-                <img src="{% static 'network/Images/logo_icon.png' %}" height="45em" style="margin-bottom: 2vh;">
-                <h3>Sign up for Network</h2><br>
+                <img src="{% static 'climate_wavers/Images/logo_icon.png' %}" height="45em" style="margin-bottom: 2vh;">
+                <h3>Sign up for Climate wavers</h2><br>
             </center>
         </div>
-    
+
         <form action="{% url 'register' %}" method="post" id="signin-form" style="width: 100%;margin-bottom: 5vh;"  enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-group">
@@ -69,7 +69,7 @@
                 <input class="btn btn-primary" type="submit" value="Sign Up" style="margin-top: 10px; width: 95%;" disabled>
             </center>
         </form>
-    
+
         <div>
             <center>
                 Already have an account?&nbsp;&nbsp;<a href="{% url 'login' %}">Log in</a>

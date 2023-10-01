@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>{% block title %}Social Network{% endblock %}</title>
+        <title>{% block title %}Climate Wavers{% endblock %}</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="{% static 'network/styles.css' %}" rel="stylesheet">
-        <link rel="shortcut icon" href="{% static 'network/Images/favicon.ico' %}">
-        <script type="text/javascript" src="{% static 'network/layout.js' %}"></script>
+        <link href="{% static 'climate_wavers/styles.css' %}" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static 'climate_wavers/Images/favicon.ico' %}">
+        <script type="text/javascript" src="{% static 'climate_wavers/layout.js' %}"></script>
         {% block head %}
         {% endblock %}
     </head>
@@ -16,7 +16,7 @@
             <div class="small-popup">
                 <div style="margin-bottom: 10px; font-size: 1.1em;"><strong>Delete Post?</strong></div>
                 <div class="grey" style="font-size: .85em; margin-bottom: 15px;">
-                    This can’t be undone and it will be removed from your profile, the timeline of any accounts that follow you, and from Network search results.
+                    This can’t be undone and it will be removed from your profile, the timeline of any accounts that follow you, and from Climate Wavers search results.
                 </div>
                 <div style="padding: 0px 5%;">
                     <button class="btn btn-light float-left" onclick="remove_popup()">Cancel</button>
@@ -39,13 +39,13 @@
                                         <g><path d="M13.414 12l5.793-5.793c.39-.39.39-1.023 0-1.414s-1.023-.39-1.414 0L12 10.586 6.207 4.793c-.39-.39-1.023-.39-1.414 0s-.39 1.023 0 1.414L10.586 12l-5.793 5.793c-.39.39-.39 1.023 0 1.414.195.195.45.293.707.293s.512-.098.707-.293L12 13.414l5.793 5.793c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414L13.414 12z"></path></g>
                                     </svg>
                                 </button>
-                                <img src="{% static 'network/Images/spinner.gif' %}" id='spinner' height="70px">
+                                <img src="{% static 'climate_wavers/Images/spinner.gif' %}" id='spinner' height="70px">
                             </div>
                             <hr>
                             <div class="form-action-btns">
                                 <div>
                                     <input name='picture' accept="image/jpeg,image/png,image/webp,image/gif" type="file" style="display: none;" id="insert-img" data-focusable="true">
-                                    <label for="insert-img" class="icon-btn form-icon-btn"> 
+                                    <label for="insert-img" class="icon-btn form-icon-btn">
                                         <svg width="1.1em" height="1.4em" viewBox="0 0 16 16" class="bi bi-image" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="margin-left:2px">
                                             <path fill-rule="evenodd" d="M14.002 2h-12a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zm-12-1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12z"/>
                                             <path d="M10.648 7.646a.5.5 0 0 1 .577-.093L15.002 9.5V14h-14v-2l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71z"/>
@@ -78,7 +78,7 @@
                     <div class="main_text-div">
                         <h2></h2>
                         <div class="grey">
-                            Join Network today to connect with people you know.
+                            Join Climate Wavers to stay updated on Climate changes
                         </div>
                     </div>
                     <div class="btn-div">
@@ -91,7 +91,7 @@
         <div class="body" data-page="{{page}}">
             <div class="sidenav">
                 <a href="{% url 'index' %}" class="navbar-brand">
-                    <img src="{% static 'network/Images/logo.png' %}" height="31px">
+                    <img src="{% static 'climate_wavers/Images/logo.png' %}" height="31px">
                 </a>
                 <div style="height: 100%;">
                     <div>
@@ -105,7 +105,7 @@
                                             <path fill-rule="evenodd" d="M3 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
                                             <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1z"/>
                                         </svg>
-                                        &nbsp;&nbsp;All Posts
+                                        &nbsp;&nbsp;Community Posts
                                     </div>
                                 </a>
                                 </li>
@@ -184,7 +184,7 @@
                         {% endif %}
                     </div>
                     <div style="position: absolute; bottom: 10px;">
-                        {% if user.is_authenticated %}    
+                        {% if user.is_authenticated %}
                             <li class="nav-item sidenav-user">
                                 <a href="{% url 'profile' user.username %}" class="nav-link">
                                     <div class="user_account">
@@ -205,7 +205,7 @@
                     </div>
                 </div>
             </div>
-            
+
             {% block body %}
             {% endblock %}
 
@@ -219,7 +219,7 @@
                                     <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
                                 </svg>
                             </div>
-                            <input type="text" name="query" id="search-box" placeholder="Search Network">
+                            <input type="text" name="query" id="search-box" placeholder="Search climate_wavers">
                         </div>
                     </form>
                 </nav>
@@ -240,7 +240,7 @@
                                     <div class="user-details">
                                         <a href="{% url 'profile' suggestion.username %}">
                                             <div id="user-name">
-                                                
+
                                                 <strong>
                                                     {{suggestion.first_name}} {{suggestion.last_name}}
                                                 </strong>
@@ -265,7 +265,7 @@
                         <div class="guest-box">
                             <center>
                                 <div class="guest-header">
-                                    <h5>New to Network?</h5>
+                                    <h5>New to Climate Wavers?</h5>
                                 </div>
                                 <div class="grey guest-content">
                                     Sign up now to get connected with people you know.

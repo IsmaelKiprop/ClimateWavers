@@ -54,11 +54,10 @@ class Comment(models.Model):
             "body": self.comment_content,
             "timestamp": self.comment_time.strftime("%b %d %Y, %I:%M %p")
         }
-    
+
 class Follower(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='followers')
     followers = models.ManyToManyField(User, blank=True, related_name='following')
 
     def __str__(self):
         return f"User: {self.user}"
-        

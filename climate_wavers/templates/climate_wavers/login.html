@@ -1,20 +1,20 @@
-{% extends "network/layout2.html" %}
+{% extends "climate_wavers/layout2.html" %}
 
 {% load static %}
 
 {% block title %}
-    Sign In | Network
+    Sign In | Climate Wavers
 {% endblock %}
 
 {% block body %}
     <div class="user-box">
         <div>
             <center>
-                <img src="{% static 'network/Images/logo_icon.png' %}" height="45em" style="margin-bottom: 2vh;">
-                <h3>Log in to Network</h3><br>
+                <img src="{% static 'climate_wavers/Images/logo_icon.png' %}" height="45em" style="margin-bottom: 2vh;">
+                <h3>Log in to Climate Wavers</h3><br>
             </center>
         </div>
-    
+
         <form action="{% url 'login' %}" method="post" id="signin-form" style="width: 100%;margin-bottom: 5vh;">
             {% csrf_token %}
             <div class="form-group">
@@ -28,7 +28,7 @@
                 <input class="btn btn-primary" type="submit" value="Log in" style="margin-top: 10px; width: 95%;" disabled>
             </center>
         </form>
-    
+
         <div>
             <center>
                 Don't have an account?&nbsp;&nbsp;<a href="{% url 'register' %}">Sign Up</a>
