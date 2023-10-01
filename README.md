@@ -71,7 +71,8 @@ We use scikit-learn's machine learning algorithms for model training and evaluat
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Initialize and train the model (Random Forest Classifier as an example)
+# Initialize and train the model (Random Forest Classifier a good starting point due to its robustness
+and ability to handle a variety of data types)
 model = RandomForestClassifier(random_state=42)
 model.fit(X_train, y_train)
 
