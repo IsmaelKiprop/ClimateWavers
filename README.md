@@ -1,46 +1,123 @@
-# Climate Wavers- Node.js Server
+# Climate Waver
 
-The Node.js Server component of the Climate Change and Disaster Response Platform is designed to handle real-time data acquisition from third-party sources using WebSockets. This server acts as a bridge between external datasets and the AI models, providing a seamless and efficient way to integrate real-time information into the platform. This server also integrates the powerful ChatGPT language model into our application, allowing Climate Wavers to create interactive and intelligent chat experiences.
+This project aims to provide real-time climate change monitoring and disaster response capabilities through an integrated platform. The system utilizes Python and Node.js servers, MySQL for users and communities database, MongoDB for storing third-party datasets, and implements mitigation strategies for the OWASP Top 10 security risks.
+
+1. [Project Architecture](#project-architecture)
+2. [Technologies Stack](technologies-stack)
+     - [Backend](#backend)
+     - [Frontend](#frontend)
+     - [Machine Learning](#machine-learning)
+     - [Database](#database)
+4. [Features](#features)
+5. [Setup and Installation](#sstup-and-installation)
+6. [OWASP Top 10 Mitigation](#owasp-top-10-mitigation)
+
+   
+ ## Project Architecture
+![Architecture](https://github.com/IsmaelKiprop/ClimateWavers/blob/fe180556e0504ee326a915adc0fa881969a5a4a3/images/architecture.jpg)
+
+## Technologies Used
+
+### Backend
+
+#### Python Server:
+**Framework**: Django\
+**Database**: MySQL for user and communities data\
+**Real-time Data Processing**: Pandas, NumPy\
+**Real-time Communication**: Django-socketio for websocket implementation\
+**APIs**: RESTful API endpoints for data retrieval and analysis
 
 
 
-## Table of Contents
 
-1. [Project Overview](#project-overview)
-2. [Features](#features)
-3. [Installation and Setup](#installation-and-setup)
-4. [Websocket Endpoints](#websocket-endpoints)
-5. [Environment Variables](#environment-variables)
-6. [External API Integration](#external-api-integration)
-5. [Error Handling](#error-handling)
+**Node.js Server**
 
-## Project Overview
+**Framework**: Express.js\
+**Database**: MongoDB for storing third-party datasets\
+**Real-time Communication**: Socket.io for websocket implementation\
+**Security**: Helmet.js for securing HTTP headers, Express Validator for input validation\
+**APIs**: RESTful websocket API endpoints for real time data retrieval, updates and analysis
 
-The Climate Change and Disaster Response Platform aims to monitor climate changes, predict natural disasters, and facilitate efficient disaster response. The Node.js Server, powered by WebSocket technology, enables the platform to gather real-time data from various sources, enhancing the accuracy and timeliness of predictions.
+
+### Machine Learning
+
+TensorFlow
+
+### Frontend
+
+**Framework**: React.js\
+**Data Visualization**: D3.js, Chart.js\
+**Mapping**: Leaflet.js for interactive maps\
+**User Interface**: Material-UI for responsive design\
+
+### Databases:
+- **MySQL**
+    - **Schema**: Users, Communities\
+           Authentication\
+    - **ORM**: SQLAlchemy
+
+- **MongoDB**:
+   - **Collections**: Third-party datasets, Real-time climate data\
+      MongoDB Atlas for cloud-based storage
 
 ## Features
+**Real-time Climate Monitoring**: Utilize satellite data, weather stations, and environmental sensors to provide real-time climate change information.\
+**Disaster Prediction**: Implement machine learning models to predict disaster events based on historical data and current climate patterns.\
+**Community Engagement**: Allow users to contribute real-time observations, report incidents, and participate in disaster preparedness activities.\
+**Third-party Data Integration**: Store and analyze third-party datasets related to climate change, environmental factors, and disaster events using MongoDB.\
 
-- **WebSocket Integration:** Establishes WebSocket connections to receive real-time data streams.
-- **Interactive Chat**: Enables interactive conversations with users in real-time.
-- **External API Integration:** Communicates with third-party APIs to acquire diverse datasets.
-- **Data Processing:** Processes incoming data and prepares it for consumption by AI models.
-- **Scalability:** Designed for scalability, allowing seamless integration of multiple data sources.
-- **Error Handling:** Implements robust error handling mechanisms for data retrieval failures.
+#### OWASP Top 10 Mitigation:
+Implement input validation and sanitization to prevent SQL Injection and Cross-site Scripting (XSS) attacks.
+Secure HTTP headers using Helmet.js to prevent various attacks like Clickjacking.
+Implement secure authentication mechanisms and use encryption for sensitive data storage to prevent data breaches.
+Regular security audits and code reviews to identify and fix vulnerabilities.
 
-## Installation and Setup
+#### Setup and Installation
+Clone the Repository:
+```bash
+git clone https://https://github.com/IsmaelKiprop/ClimateWavers.git
+cd ClimateWavers
+```
+
+**Setup Python Server**:
 
 1. **Clone the Repository:**
    ```bash
-   git clone <repository-url>
-   cd nodejs-server
+   cd Django-server
    ```
 
 2. **Install Dependencies:**
    ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Database Setup:**
+   - Configure the database settings in `settings.py`.
+   - Run migrations:
+     ```bash
+     python manage.py migrate
+     ```
+
+4. **Static and Media Files:**
+   - Collect static files:
+     ```bash
+     python manage.py collectstatic
+     ```
+   - Configure media file settings in `settings.py`.
+
+5. **Run the Django Development Server:**
+   ```bash
+   python manage.py runserver
+   ```
+
+**Setup Node Server:**
+
+ 1. **Install Dependencies:**
+   ```bash
    npm install
    ```
 
-3. **Environment Variables:**
+2. **Environment Variables:**
    - Create a `.env` file in the root directory.
    - Define the following environment variables in the `.env` file:
      ```env
@@ -48,31 +125,7 @@ The Climate Change and Disaster Response Platform aims to monitor climate change
      THIRD_PARTY_API_URL=<third-party-api-url>
      ```
 
-4. **Run the Node.js Server:**
+3. **Run the Node.js Server:**
    ```bash
    npm start
    ```
-
-   The Node.js server will be available at `http://localhost:3000`.
-
-## WebSocket Endpoints
-
-- **Data Acquisition:**
-  - `/data-stream`: WebSocket endpoint to establish a connection for real-time data acquisition.
-  
-## Environment Variables
-
-- **PORT:** Port number for the Node.js server (default: `3000`).
-- **THIRD_PARTY_API_URL:** URL of the third-party API providing real-time data.
-
-## External API Integration
-
-The Node.js server integrates with external APIs to acquire real-time datasets. Ensure that the API endpoints are accessible and provide data in a format compatible with the server's processing logic.
-
-## Error Handling
-
-The server includes error handling mechanisms to manage scenarios where data retrieval from external sources fails. Error logs and notifications are implemented to aid in diagnosing and resolving issues promptly.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
